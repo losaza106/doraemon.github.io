@@ -22,7 +22,6 @@ $(document).ready(function(){
             var id = $('.activeI').attr('id');
             if(id != undefined){
                 if(current_nameItem == "Delete"){
-
                     $(this).css('background-image', "none");
                 }else{
                     var bg =  'url("img/'+id+'.jpg")';

@@ -9,12 +9,69 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <title>Doraemon</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><b>ค้นหาผัก ผลผลิต</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">เลือกฤดูของผัก</label>
+                        <select id="select_season" class="form-control form-control">
+                            <option value="Spring">ฤดูใบไม้ผลิ (Spring)</option>
+                            <option value="Summer">ฤดูร้อน (Summer)</option>
+                            <option value="Autumn">ฤดูใบไม้ร่วง (Autumn)</option>
+                            <option value="Winter">ฤดูหนาว (Winter)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                <th scope="col">รูป</th>
+                                <th scope="col">ชื่อภาษาอังกฤษ</th>
+                                <th scope="col">ชื่อภาษาไทย</th>
+                                <th scope="col">ราคาต่อเมล็ด</th>
+                                <th scope="col">ราคาขาย / ชิ้น</th>
+                                <th scope="col">ระเวลาเก็บเกี่ยว</th>
+                                <th scope="col">เก็บเกี่ยวต่อเนื่อง</th>
+                                <th scope="col">#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items_list">
+                                <tr>
+                                <th scope="row"><img src="img/no_img.jpg" width="50" height="50" alt=""></th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td><button class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg row navbar-dark bg-dark" style="background-color: #e3f2fd;">
         <div class="col-md-12 text-center">
             <a class="navbar-brand" href="#"><span style="color:white;">Doraemon : Story of Season</span></a>
@@ -23,128 +80,68 @@
     <div class="container">
         <div class="col-12 mt-3">
             <div class="card">
-                <h5 class="card-header">TOOL MINING</h5>
+                <h5 class="card-header">คำนวณราคาผัก</h5>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <table class="table table-bordered earth">
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="items">
-                                        <li class="select-item" name_item="down"><img id="down" class="activeI" src="img/down.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="stone"><img id="stone" src="img/stone.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="copper"><img id="copper" src="img/copper.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="iron"><img id="iron" src="img/iron.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="silver"><img id="silver" src="img/silver.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="gold"><img id="gold" src="img/gold.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="diamon"><img id="diamon" src="img/diamon.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="sapphire"><img src="img/sapphire.jpg"
-                                                id="sapphire" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="emerald"><img id="emerald"
-                                                src="img/emerald.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="amble"><img id="amble" src="img/amble.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="ruby"><img id="ruby" src="img/ruby.jpg"
-                                                width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="Fern_Fossil"><img id="Fern_Fossil"
-                                                src="img/Fern_Fossil.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="Nautilidae"><img id="Nautilidae"
-                                                src="img/Nautilidae.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="Raptor_Claw"><img id="Raptor_Claw"
-                                                src="img/Raptor_Claw.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="T-Rex_Fossil"><img id="T-Rex_Fossil"
-                                                src="img/T-Rex_Fossil.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="Triceratops_Fossil"><img
-                                                id="Triceratops_Fossil" src="img/Triceratops_Fossil.jpg" width="50"
-                                                height="50" alt=""></li>
-                                        <li class="select-item" name_item="Trilobite"><img id="Trilobite"
-                                                src="img/Trilobite.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="Steg-o-plate"><img id="Steg-o-plate"
-                                                src="img/Steg-o-plate.jpg" width="50" height="50" alt=""></li>
-                                        <li class="select-item" name_item="Junk"><img id="Junk" src="img/Junk.jpg" width="50" height="50" alt=""></li>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Step 1 >>>>>>>>>>>>>>></label> 
+                                <button type="button" class="ml-2 btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                    ค้นหาผัก
+                                </button>
+                                    <hr>
+                                        <table>
+                                            <tr>
+                                                <td >
+                                                    <img src="img/Turnip.jpg" id="img_crop" class="mr-3" width="100" height="100" alt="">                                    
+                                                </td>
+                                                <td>
+                                                <b>ชื่อภาษาอังกฤษ</b> : <span class="badge badge-success" id="Name_Eng" style="font-size:20px;">Turnip</span> &nbsp; <b>ราคาเมล็ด</b> : <span class="badge badge-warning" id="Price">50</span> &nbsp; <b>ราคาขาย/ชิ้น</b> : <span id="Sale" class="badge badge-warning">110</span> <br>
+                                                <b>ชื่อภาษาไทย</b> : <span class="badge badge-success" id="Name_Thai">หัวผักกาด</span> &nbsp; <b>ระยะเวลาเก็บเกี่ยว :</b> <span class="badge badge-danger" id="Grow_Frist">5 วัน</span> &nbsp; <b>เก็บเกี่ยวต่อเนื่อง :</b> <span id="Grow_Next" class="badge badge-danger">- วัน</span>
+                                                </td>
+                                            </tr>
+                                        </table>
                                         
-                                        <li class="select-item" name_item="Delete"><img id="Delete" src="img/Delete.jpg" width="50" height="50" alt=""></li>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mt-5">
-                                    <div class="alert alert-primary" role="alert">
-                                        Item : <span id="show_item_text">down</span>
-                                    </div>
-                                    <button class="btn btn-danger" id="reset">RESET</button>
-                                </div>
                             </div>
+                            <div class="form-group">
+                                <label for="">ปลูกกี่เมล็ด</label>
+                                <input type="text" id="Unit_Plant" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">วันที่เริ่มปลูก</label>
+                                <select id="start_date" class="form-control">
+                                    <?php 
+                                    for ($i = 1 ; $i<= 30 ; $i++){
+                                        ?>
+                                            <option value="<?=$i?>"><?=$i?></option>
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+
+                                <button class="btn btn-success btn-block mt-3" id="calculate"><i class="fa fa-calculator" aria-hidden="true"></i> Calculate</button>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="alert alert-danger" style="display:none;" id="alert_text" role="alert">
+                                ปล. ผักชนิดนี้ยังไม่มีข้อมูล การเก็บเกี่ยวครั้งต่อไปว่าใช้กี่วัน
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                    <th scope="col">เก็บเกี่ยวได้ทั้งหมด</th>
+                                    <th scope="col">ทุน</th>
+                                    <th scope="col">กำไรแบบไม่หักทุน (ครั้งเดียว)</th>
+                                    <th scope="col">กำไรแบบหักทุนแล้ว (ครั้งเดียว)</th>
+                                    <th scope="col">กำไรทั้งเดือน (หักทุนแล้ว)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="calculate">
+                                    
+                                </tbody>
+                                </table>
                         </div>
                     </div>
                 </div>
@@ -226,7 +223,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>

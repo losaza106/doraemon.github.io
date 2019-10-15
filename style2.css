@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit|Modak&display=swap');
+body{
+    font-family: 'Modak', cursive;
+    font-family: 'Kanit', sans-serif;
+}
+.navbar-brand{
+    font-family: 'Modak', cursive;
+    font-size: 30px;
+}
