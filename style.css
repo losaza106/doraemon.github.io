@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit|Modak&display=swap');
+body{
+    font-family: 'Modak', cursive;
+    font-family: 'Kanit', sans-serif;
+}
+.navbar-brand{
+    font-family: 'Modak', cursive;
+    font-size: 30px;
+}
+td{
+	min-height: 50px;
+	background: aqua;
+    background-size: cover !important;
+    
+}
+.earth td {
+    background: #d3ac21;
+    height: 50px;
+}
+.table {
+    text-align: center;
+    width: 350px !important;
+}
+.items{
+    list-style-type: none;
+}
+.items li{
+    float: left;
+    cursor: pointer;
+}
+
+.activeI {
+    border: 3px solid red;
+}
+
+tr:nth-child(4),
+tr td:nth-child(4){
+	border: 5px solid black !important;
+}
