@@ -16,15 +16,23 @@ $(document).ready(function(){
         $('#down').addClass('activeI');
         current_nameItem = "down";
     });
+
+    $('td').each(function(){
+        $(this).click(function(){
+            var id = $('.activeI').attr('id');
+            if(id != undefined){
+                if(current_nameItem == "Delete"){
+
+                    $(this).css('background-image', "none");
+                }else{
+                    var bg =  'url("img/'+id+'.jpg")';
+                    $(this).css('background-image', bg);
+                }
+                
+            }
+      });
+    });
 });
 
-$('td').each(function(){
-    $(this).click(function(){
-        var id = $('.activeI').attr('id');
-        if(id != undefined){
-            var bg =  'url("img/'+id+'.jpg")';
-            $(this).css('background-image', bg);
-        }
-  });
-});
+
 
